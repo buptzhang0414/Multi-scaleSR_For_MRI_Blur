@@ -24,4 +24,21 @@ Multi-scale Network with the deeper and wider residual block for MRI motion arti
 
 data数据集：由于数据集不是公开数据集，所以暂时还不能公布
 
+转到./Multi-scaleSR，执行
+
+```
+python run_model.py --phase=train --batch=10 --lr=1e-4 --epoch=4000 --height=512 --width=512
+```
+
+进行训练
+
+测试用代码
+
+```
+python run_model.py --input_path=./test_train --output_path=./test_train_res --height=512 --width=512 --gpu=-1
+```
+
+下图是部分结果
+
+<img src="https://github.com/buptzhang0414/Multi-scaleSR_For_MRI_Blur/blob/master/result.png" width="545pt" height="340pt">
 
